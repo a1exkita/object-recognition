@@ -8,7 +8,7 @@
 		<title>Camera App</title>
 
 		<!-- Link to main style sheet -->
-		<link rel="stylesheet" href="style.css"> 
+		<link rel="stylesheet" href="/static/style.css"> 
 	</head>
 	<body>
 
@@ -19,10 +19,12 @@
 		    <canvas id="camera--sensor"></canvas>
 		    
 		    <!-- Camera view -->
-		    <video id="camera--view" autoplay playsinline></video>
+		    <!-- <video id="camera--view" autoplay playsinline></video> -->
 		    
 		    <!-- Camera output -->
-		    <img src="//:0" alt="" id="camera--output">
+		    <!-- <img src="//:0" alt="" id="camera--output"> -->
+
+			<img id="camera--view" src="{{ url_for('video_feed') }}" width="100%">
 
 		    <!-- Camera trigger -->
 		    <button id="camera--trigger">Take a picture</button>
@@ -30,6 +32,6 @@
 		</main>
 
 		<!-- Reference to your JavaScript file -->
-		<script src="app.js"></script> 
+		<script src="/static/app.js"></script> 
 	</body>
 </html>
